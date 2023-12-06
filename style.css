@@ -1,0 +1,32 @@
+.card-img-custom:hover {
+  filter: blur(10px);
+}
+
+.card-custom:hover {
+  cursor: pointer;
+  transition: .2s;
+  border: 2.4px solid rgb(255, 46, 108);
+}
+.card-custom:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 0.8rem;
+  transition: .2s;
+}
+
+.card-custom::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to top, #000000cc, transparent);
+  inset: 50% 0 0 0;
+}
+
+.card-custom:hover .card-img-custom {
+  filter: blur(3px);
+}
+
+.card-custom:hover .text-group-custom {
+  pointer-events: none;
+}
